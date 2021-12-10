@@ -51,6 +51,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
       child: Card(
         child: ListTile(
           onTap: (){
+
+            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PostDetailPage(post: todo)));
             _showMyDialog(context, todo);
           },
           title: Text(
@@ -59,7 +61,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
           ),
           leading: Icon(Icons.add),
           trailing: Text(
-            todo.userId.toString(),
+            todo.id.toString(),
             style: TextStyle(fontSize: 19.0, color: Colors.green),
           ),
         ),
@@ -86,7 +88,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
             TextButton(
               child: Text('OK'),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => PostDetailPage(post: todo)));
+
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PostDetailPage(postId: todo.id)));
               },
             ),
           ],

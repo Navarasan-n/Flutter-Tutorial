@@ -36,6 +36,32 @@ class ApiService {
     return result;
   }
 
+  static Future<Post> getPost(int id) async {
+
+    var response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/$id"));
+    Post result;
+
+    print(response.statusCode);
+
+    if (response.statusCode == 200) {
+      String jsonResponse = response.body;
+      // print(jsonResponse);
+
+      Map _resultData = json.decode(jsonResponse);
+
+      result = Post.fromJson(_resultData);
+
+      // print("Result is .. ");
+      print(result);
+
+    } else {
+      throw "Something went wrong";
+    }
+
+    return result;
+  }
+
+
 
   postData() {
 

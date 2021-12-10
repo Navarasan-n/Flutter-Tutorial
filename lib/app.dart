@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/timer_page.dart';
 
 import 'layout.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
+      // home: TimerPage(),
       home: LayoutScreen(),
     );
   }
