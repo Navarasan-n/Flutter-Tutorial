@@ -1,0 +1,8 @@
+Task 1:
+
+1. create a simple login page with email & password.
+2. both field should be vaidated ( email shold be valid & password should not less than 8).
+3. after login, home page should be a simple form page where it should have the fields like 
+   (firstname, lastname, email, gender(radio btn), address, phone number, country(dropdown) etc).
+4. finally submit button. when clicked, show a snackbar as "Successfully submitted".
+5. validation in form page is optional.
