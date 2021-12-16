@@ -1,0 +1,8 @@
+Task 2 - deadline ( 20-12-2021 ) Mon
+
+
+1. get the data from api - "https://jsonplaceholder.typicode.com/posts".
+2. show this data in a list view in first page.
+3. navigate to the second page and show a simple button in second page.
+4. by clicking on the button in second page, it should navigate to third page.
+5. third page should contains the same list data & design as like first page but without showing the loading (http network call).
