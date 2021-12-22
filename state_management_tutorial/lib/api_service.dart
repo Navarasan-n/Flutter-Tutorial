@@ -2,11 +2,13 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+import 'post_model.dart';
+
 class ApiService {
 
-  static final String _postUrl = "https://jsonplaceholder.typicode.com/posts";
+  static final String _postUrl = "https://sonplaceholder.typicode.com/posts";
 
-  static Future<List> getData() async {
+  static Future<List<Post>> getData() async {
     try{
       var response = await http.get(Uri.parse(_postUrl));
 
@@ -16,12 +18,21 @@ class ApiService {
 
         List data = json.decode(result);
 
-        return data;
+        List<Post> _data = [];
+
+        data.forEach((element) {
+          Post _post = Post.fromJson(element);
+          _data.add(_post);
+        });
+
+
+        return _data;
       }else {
         throw "Invalid Status code";
       }
 
     }catch(e) {
+      print(e);
       throw "Something went wrong";
     }
   }

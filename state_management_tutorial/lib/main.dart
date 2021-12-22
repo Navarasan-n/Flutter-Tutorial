@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_tutorial/post_screen.dart';
+import 'package:state_management_tutorial/post_view_model.dart';
 import 'package:state_management_tutorial/second_page.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => CounterModel()),
+        ChangeNotifierProvider(create: (context) => PostViewModel()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
