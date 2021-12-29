@@ -6,7 +6,7 @@ import 'post_model.dart';
 
 class ApiService {
 
-  static final String _postUrl = "https://sonplaceholder.typicode.com/posts";
+  static final String _postUrl = "https://jsonplaceholder.typicode.com/posts";
 
   static Future<List<Post>> getData() async {
     try{

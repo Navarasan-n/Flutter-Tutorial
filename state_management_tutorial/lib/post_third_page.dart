@@ -22,6 +22,15 @@ class _PostThirdPageState extends State<PostThirdPage> {
   // ];
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    final model = Provider.of<PostViewModel>(context, listen: false);
+
+    // model.setPosts = [];
+  }
+
+  @override
   Widget build(BuildContext context) {
      final model = Provider.of<PostViewModel>(context);
 

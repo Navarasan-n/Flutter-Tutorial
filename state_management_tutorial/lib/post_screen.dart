@@ -72,6 +72,8 @@ class _PostScreenState extends State<PostScreen> {
       return Center(child: Text("${model.error}"));
     }
 
+    // return Center(child: Text("${model.posts?.length}"),);
+
     return  PostList(posts: model.posts);
   }
 

@@ -9,6 +9,9 @@ class PostList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    print(posts);
+
     return ListView.builder(
       itemCount: posts?.length,
       itemBuilder: (context, index) {
